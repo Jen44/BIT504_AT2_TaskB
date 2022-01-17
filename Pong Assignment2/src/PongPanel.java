@@ -17,14 +17,14 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 
 	private final static int TIMER_DELAY = 5;
 
-	private final static int BALL_MOVEMENT_SPEED = 2;
+	private final static int BALL_MOVEMENT_SPEED = 4;
 
 	Ball ball;
 
 	Paddle paddle1;
 	Paddle paddle2;
 
-	private final static int POINTS_TO_WIN = 3;
+	private final static int POINTS_TO_WIN = 11;
 	int player1Score = 0, player2Score = 0;
 	Player gameWinner;
 
@@ -63,19 +63,19 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	public void keyPressed(KeyEvent event) {
 
 		if (event.getKeyCode() == KeyEvent.VK_UP) {
-			paddle2.setyVelocity(-1);
+			paddle2.setyVelocity(-3);
 		}
 
 		else if (event.getKeyCode() == KeyEvent.VK_DOWN) {
-			paddle2.setyVelocity(1);
+			paddle2.setyVelocity(3);
 		}
 
 		if (event.getKeyCode() == KeyEvent.VK_W) {
-			paddle1.setyVelocity(-1);
+			paddle1.setyVelocity(-3);
 		}
 
 		else if (event.getKeyCode() == KeyEvent.VK_S) {
-			paddle1.setyVelocity(1);
+			paddle1.setyVelocity(3);
 		}
 	}
 
